@@ -9,6 +9,7 @@ vim.g.mapleader = " "
 vim.cmd [[set fcs=eob:\ ]]
 vim.cmd [[filetype plugin indent on]]
 
+
 local options = {
     writebackup = false,
     wrap = true,
@@ -57,5 +58,6 @@ end
 
 utils.setSpacesSize { go = 4, python = 4, rust = 4, cpp = 4, c = 4 }
 
-theme.init() 
+theme.init()
 
+vim.cmd[[highlight Normal guibg=NONE ctermbg=NONE]]
