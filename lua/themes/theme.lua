@@ -30,6 +30,7 @@ _M.colors = {
     grey17 = "#0f1115",
     grey18 = "#0d0e11",
     grey19 = "#020203",
+    transparent = "transparent",
 }
 
 _M.init = function()
@@ -47,7 +48,7 @@ _M.init = function()
                 diagnostics = "underline",
             },
             disable = {
-                background = false,
+                background = true,
                 cursorline = false,
                 eob_lines = true,
             },
@@ -55,7 +56,7 @@ _M.init = function()
                 VertSplit = { fg = _M.colors.grey14 },
                 BufferLineIndicatorSelected = { fg = _M.colors.cyan, bg = _M.colors.bg },
                 BufferLineFill = { fg = _M.colors.fg, bg = _M.colors.grey14 },
-                NvimTreeNormal = { fg = _M.colors.grey5, bg = _M.colors.grey14 },
+                NvimTreeNormal = { fg = _M.colors.transparent, bg = _M.colors.transparent },
                 WhichKeyFloat = { bg = _M.colors.grey14 },
                 GitSignsAdd = { fg = _M.colors.green },
                 GitSignsChange = { fg = _M.colors.orange },
