@@ -3,9 +3,10 @@ local mapper = function (mode, key, result)
 end
 
 vim.g.mapleader = ' '
+vim.g.user_emmet_leader_key = ','
 
 mapper('i', '<Leader><Leader>', '<cmd>w <CR><Esc>')
-mapper('n', '<C-S>', ':w! <CR>')
+-- mapper('n', '<C-S>', ':w! <CR>')
 
 mapper('n', '<C-w>', ':w <CR>')
 mapper('n', '<C-q>', ':q <CR>')
@@ -19,7 +20,7 @@ mapper('n', '<leader>d', ':t. <CR>')
 -- Telescope
 mapper('n', '<Leader>ff', ':Telescope find_files <CR>')
 mapper('n', '<Leader>fg', ':Telescope live_grep <CR>')
-mapper('n', '<C-]>', ':Telescope buffers <CR>')
+mapper('n', '<C-b>', ':Telescope buffers <CR>')
 mapper('n', '<Leader>fh',':Telescope help_tags <CR>')
 
 mapper('n','<Leader>fd', ':Telescope file_browser <CR>')

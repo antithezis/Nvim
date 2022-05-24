@@ -44,7 +44,7 @@ return packer.startup(function(use)
 
 use {
    'windwp/nvim-autopairs',
-    config = require "plugins.configs.autopairs"
+   config = require "plugins.configs.autopairs"
 }  
   use {
       "nvim-telescope/telescope.nvim",
@@ -55,7 +55,7 @@ use {
         {'nvim-telescope/telescope-symbols.nvim'},
         { "nvim-telescope/telescope-file-browser.nvim" }, 
       },
-      config = require "plugins.configs.telescope",
+     config = require "plugins.configs.telescope",
     }
 
     use {
@@ -65,7 +65,7 @@ use {
         "p00f/nvim-ts-rainbow",
       },
       run = ':TSUpdate',
-      config = require "plugins.configs.treesitter"
+     config = require "plugins.configs.treesitter"
   }
 
   use {
@@ -74,7 +74,7 @@ use {
           "neovim/nvim-lspconfig",
           "jose-elias-alvarez/typescript.nvim",
       },
-      config = require "plugins.configs.lsp"
+     config = require "plugins.configs.lsp"
     }
 
     use { 'ibhagwan/fzf-lua',
@@ -89,7 +89,7 @@ use {
   use { "kyazdani42/nvim-web-devicons", config = require "plugins.configs.icons" }
   use {
       "nvim-lualine/lualine.nvim",
-       config = require "plugins.configs.lualine",
+      config = require "plugins.configs.lualine",
       requires = { "kyazdani42/nvim-web-devicons", opt = true },
   }
 
@@ -106,12 +106,12 @@ use {
           "hrsh7th/vim-vsnip",
           "hrsh7th/cmp-nvim-lsp-signature-help",
       },
-      config = require "plugins.configs.cmp",
+     config = require "plugins.configs.cmp",
   }
 
   use {
     "L3MON4D3/LuaSnip",
-    config = require "plugins.configs.luasnip"
+   config = require "plugins.configs.luasnip"
   }
 
   use {"saadparwaiz1/cmp_luasnip"}
@@ -138,6 +138,8 @@ use {
   use 'sheerun/vim-polyglot'
   use 'alvan/vim-closetag'
   use 'tpope/vim-commentary'
+  use 'mattn/emmet-vim'
+  use 'christoomey/vim-tmux-navigator'
 
  if PACKER_BOOTSTRAP then
     require("packer").sync()
