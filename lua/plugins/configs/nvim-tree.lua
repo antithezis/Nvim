@@ -22,7 +22,6 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
     mappings = {
       custom_only = false,
       list = {
-        { key = "<C-b>", action = "vsplit"}
       },
     },
   },
