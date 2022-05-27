@@ -40,20 +40,20 @@ packer.init {
 
 return packer.startup(function(use)
   -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself 
+  use "wbthomason/packer.nvim" -- Have packer manage itself
 
 use {
    'windwp/nvim-autopairs',
    config = require "plugins.configs.autopairs"
-}  
+}
   use {
       "nvim-telescope/telescope.nvim",
       requires = {
-        {'nvim-lua/popup.nvim'},                                 
-        {'nvim-lua/plenary.nvim'},                               
+        {'nvim-lua/popup.nvim'},
+        {'nvim-lua/plenary.nvim'},
         {'nvim-telescope/telescope-fzf-native.nvim', run="make"},
         {'nvim-telescope/telescope-symbols.nvim'},
-        { "nvim-telescope/telescope-file-browser.nvim" }, 
+        { "nvim-telescope/telescope-file-browser.nvim" },
       },
      config = require "plugins.configs.telescope",
     }
@@ -80,7 +80,7 @@ use {
     use { 'ibhagwan/fzf-lua',
     -- optional for icon support
     requires = { 'kyazdani42/nvim-web-devicons' }
-  }  
+  }
 
   -- UI
 
@@ -140,6 +140,12 @@ use {
   use 'tpope/vim-commentary'
   use 'mattn/emmet-vim'
   use 'christoomey/vim-tmux-navigator'
+  -- use 'terryma/vim-multiple-cursors'
+  --
+  use {
+    'NvChad/nvterm',
+    config = require "plugins.configs.nvterm"
+  }
 
  if PACKER_BOOTSTRAP then
     require("packer").sync()

@@ -5,7 +5,7 @@ end
 vim.g.mapleader = ' '
 vim.g.user_emmet_leader_key = ','
 
-mapper('i', '<Leader><Leader>', '<cmd>w <CR><Esc>')
+mapper('i', '<A-Leader>', '<cmd>w <CR><Esc>')
 -- mapper('n', '<C-S>', ':w! <CR>')
 
 mapper('n', '<C-w>', ':w <CR>')
@@ -47,3 +47,9 @@ mapper('n', '<Leader>bp', ': BraceyStop <CR>')
 mapper('n', '<Leader>br', ': BraceyReload <CR>')
 
 mapper('n', '<Leader>F', ':CocCommand prettier.formatFile <CR>')
+
+
+mapper('n', '<C-j>', ':%s/\vmapper')
+
+-- Terminal
+mapper('n', '<C-t>', ':split <CR> :ter <CR> :resize 15 <CR>')
