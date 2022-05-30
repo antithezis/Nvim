@@ -53,6 +53,3 @@ mapper('n', '<C-j>', ':%s/\vmapper')
 
 -- Terminal
 mapper('n', '<C-t>', ':split <CR> :ter <CR> :resize 15 <CR>')
-
--- prettier
-
