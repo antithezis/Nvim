@@ -18,8 +18,8 @@ end
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
   augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  autocmd!
+  autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]]
 
@@ -42,42 +42,42 @@ return packer.startup(function(use)
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
 
-use {
-   'windwp/nvim-autopairs',
-   config = require "plugins.configs.autopairs"
-}
   use {
-      "nvim-telescope/telescope.nvim",
-      requires = {
-        {'nvim-lua/popup.nvim'},
-        {'nvim-lua/plenary.nvim'},
-        {'nvim-telescope/telescope-fzf-native.nvim', run="make"},
-        {'nvim-telescope/telescope-symbols.nvim'},
-        { "nvim-telescope/telescope-file-browser.nvim" },
-      },
-     config = require "plugins.configs.telescope",
-    }
+    'windwp/nvim-autopairs',
+    config = require "plugins.configs.autopairs"
+  }
+  use {
+    "nvim-telescope/telescope.nvim",
+    requires = {
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
+      {'nvim-telescope/telescope-fzf-native.nvim', run="make"},
+      {'nvim-telescope/telescope-symbols.nvim'},
+      { "nvim-telescope/telescope-file-browser.nvim" },
+    },
+    config = require "plugins.configs.telescope",
+  }
 
-    use {
-      'nvim-treesitter/nvim-treesitter',
-      requires = {
-        "windwp/nvim-ts-autotag",
-        "p00f/nvim-ts-rainbow",
-      },
-      run = ':TSUpdate',
-     config = require "plugins.configs.treesitter"
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    requires = {
+      "windwp/nvim-ts-autotag",
+      "p00f/nvim-ts-rainbow",
+    },
+    run = ':TSUpdate',
+    config = require "plugins.configs.treesitter"
   }
 
   use {
     "williamboman/nvim-lsp-installer",
-      requires = {
-          "neovim/nvim-lspconfig",
-          "jose-elias-alvarez/typescript.nvim",
-      },
-     config = require "plugins.configs.lsp"
-    }
+    requires = {
+      "neovim/nvim-lspconfig",
+      "jose-elias-alvarez/typescript.nvim",
+    },
+    config = require "plugins.configs.lsp"
+  }
 
-    use { 'ibhagwan/fzf-lua',
+  use { 'ibhagwan/fzf-lua',
     -- optional for icon support
     requires = { 'kyazdani42/nvim-web-devicons' }
   }
@@ -88,30 +88,30 @@ use {
   use { "goolord/alpha-nvim", config = require "plugins.configs.alpha" }
   use { "kyazdani42/nvim-web-devicons", config = require "plugins.configs.icons" }
   use {
-      "nvim-lualine/lualine.nvim",
-      config = require "plugins.configs.lualine",
-      requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    "nvim-lualine/lualine.nvim",
+    config = require "plugins.configs.lualine",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true },
   }
 
   use {
-      "hrsh7th/nvim-cmp",
-      requires = {
-          "hrsh7th/cmp-nvim-lsp",
-          "hrsh7th/cmp-nvim-lua",
-          "hrsh7th/cmp-buffer",
-          "hrsh7th/cmp-path",
-          "hrsh7th/cmp-cmdline",
-          "hrsh7th/cmp-nvim-lsp-document-symbol",
-          "hrsh7th/cmp-vsnip",
-          "hrsh7th/vim-vsnip",
-          "hrsh7th/cmp-nvim-lsp-signature-help",
-      },
-     config = require "plugins.configs.cmp",
+    "hrsh7th/nvim-cmp",
+    requires = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline",
+      "hrsh7th/cmp-nvim-lsp-document-symbol",
+      "hrsh7th/cmp-vsnip",
+      "hrsh7th/vim-vsnip",
+      "hrsh7th/cmp-nvim-lsp-signature-help",
+    },
+    config = require "plugins.configs.cmp",
   }
 
   use {
     "L3MON4D3/LuaSnip",
-   config = require "plugins.configs.luasnip"
+    config = require "plugins.configs.luasnip"
   }
 
   use {"saadparwaiz1/cmp_luasnip"}
@@ -128,9 +128,9 @@ use {
   use {
     'lewis6991/gitsigns.nvim',
     config = function()
-    require('gitsigns').setup()
-  end
-   -- tag = 'release' -- To use the latest release 
+      require('gitsigns').setup()
+    end
+    -- tag = 'release' -- To use the latest release
   }
 
   use 'tpope/vim-fugitive'
@@ -140,14 +140,22 @@ use {
   use 'tpope/vim-commentary'
   use 'mattn/emmet-vim'
   use 'christoomey/vim-tmux-navigator'
-  -- use 'terryma/vim-multiple-cursors'
-  --
+  use 'turbio/bracey.vim'
+  -- use {'neoclide/coc.nvim', branch = 'release'}
+
   use {
-    'NvChad/nvterm',
-    config = require "plugins.configs.nvterm"
+    'prettier/vim-prettier',
+    run = 'yarn install',
+    ft = {'javascript', 'typescript', 'css', 'html', 'scss', 'graphql', 'markdown', 'react'}
   }
 
- if PACKER_BOOTSTRAP then
+  use {
+    "NTBBloodbath/rest.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = require "plugins.configs.rest"
+  }
+
+  if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
 end)
