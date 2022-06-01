@@ -6,6 +6,7 @@ vim.g.mapleader = ' '
 vim.g.user_emmet_leader_key = ','
 
 mapper('i', '<A-Leader>', '<cmd>w <CR><Esc>')
+mapper('n', '<A-w>', '<cmd>bd <CR>')
 -- mapper('n', '<C-S>', ':w! <CR>')
 
 mapper('n', '<C-w>', ':w <CR>')
