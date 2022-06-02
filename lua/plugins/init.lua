@@ -146,9 +146,12 @@ return packer.startup(function(use)
   -- React
   use {'neoclide/coc.nvim', branch = 'release'}
   use 'ianks/vim-tsx'
-  use 'maxmellon/vim-jsx-pretty'
   use 'mxw/vim-jsx'
+  use 'maxmellon/vim-jsx-pretty'
+  use 'pangloss/vim-javascript'
   use 'alampros/vim-styled-jsx'
+  use {'styled-components/vim-styled-components',  branch = 'main' }
+  use 'fleischie/vim-styled-components'
   -- use 'leafgarkabd/typescript-vim'
 
   use {

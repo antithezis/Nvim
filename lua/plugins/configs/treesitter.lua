@@ -5,6 +5,7 @@ if not ok then
 end
 
 local colors = require("themes.theme").colors
+-- local injections = require("./injections.scm")
 
 treesitter.setup {
     autotag = {

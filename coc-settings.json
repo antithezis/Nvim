@@ -1,7 +1,17 @@
 {
-    "coc.preferences.formatOnSaveFileTypes": ["typescript, typescriptreact"],
-    "suggest.autoTrigger": "none",
-    "suggest.timeout": 1,
-    "diagnostic.enable": false,
-    "clangd.semanticHighlighting": true
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  "tsserver.formatOnType": true,
+  "coc.preferences.formatOnType": true,
+  "suggest.autoTrigger": "none",
+  "suggest.timeout": 1,
+  "diagnostic.enable": false,
+  "clangd.semanticHighlighting": true,
+
+  "styled-components.tags": ["styled", "css", "sty", "createGlobalStyle"]
 }

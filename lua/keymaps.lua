@@ -9,6 +9,9 @@ mapper('i', '<A-Leader>', '<cmd>w <CR><Esc>')
 mapper('n', '<A-w>', '<cmd>bd <CR>')
 -- mapper('n', '<C-S>', ':w! <CR>')
 
+mapper('n', '<C-Left>', ':bp <CR>')
+mapper('n', '<C-Right>', ':bn <CR>')
+
 mapper('n', '<C-w>', ':w <CR>')
 mapper('n', '<C-q>', ':q <CR>')
 mapper('n', '<Leader><Right>', '20 <C-w>>')
@@ -47,9 +50,6 @@ mapper('n', '<Leader>bs', ': Bracey <CR>')
 mapper('n', '<Leader>bp', ': BraceyStop <CR>')
 mapper('n', '<Leader>br', ': BraceyReload <CR>')
 
-mapper('n', '<Leader>F', ':CocCommand prettier.formatFile <CR>')
-
-
 mapper('n', '<C-j>', ':%s/\vmapper')
 
 -- Terminal
@@ -62,5 +62,6 @@ mapper('n', 'gi', '<Plug>(coc-implementation)')
 mapper('n', 'gr', '<Plug>(coc-references)')
 
 mapper('n', '<Leader>a', '<Plug>(coc-codeaction-selected)')
-mapper('n', '<leader>qf', '<Plug>(coc-fix-current)')
+mapper('n', '<Leader>qf', '<Plug>(coc-fix-current)')
+mapper('n', '<Leader>rn', '<Plug>(coc-rename)')
 mapper('n', 'ff', '<Plug>(coc-format-selected)')
