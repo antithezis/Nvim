@@ -141,7 +141,15 @@ return packer.startup(function(use)
   use 'mattn/emmet-vim'
   use 'christoomey/vim-tmux-navigator'
   use 'turbio/bracey.vim'
-  -- use {'neoclide/coc.nvim', branch = 'release'}
+
+
+  -- React
+  use {'neoclide/coc.nvim', branch = 'release'}
+  use 'ianks/vim-tsx'
+  use 'maxmellon/vim-jsx-pretty'
+  use 'mxw/vim-jsx'
+  use 'alampros/vim-styled-jsx'
+  -- use 'leafgarkabd/typescript-vim'
 
   use {
     'prettier/vim-prettier',

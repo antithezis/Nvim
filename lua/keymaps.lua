@@ -30,7 +30,7 @@ mapper("n", "<Leader>fr", "<cmd>lua require('telescope.builtin').lsp_references(
 mapper("n", "<Leader>co", "<cmd>lua require('telescope.builtin').colorscheme()<CR>") -- colorschemes
 mapper("n", "<Leader>gc", "<cmd>lua require('telescope.builtin').git_branches()<CR>") -- checkout different branches
 mapper("n", "<Leader>re", "<cmd>lua require('telescope.builtin').git_commits()<CR>") -- checkout commits; <CR> to checkout, <C-r>[m, s, h] to reset [mixed, soft, hard]
-mapper("n", "<Leader>qf", "<cmd>lua require('telescope.builtin').quickfix()<CR>") -- jump to items in quickfix list
+-- mapper("n", "<Leader>qf", "<cmd>lua require('telescope.builtin').quickfix()<CR>") -- jump to items in quickfix list
 mapper("n", "H", "<cmd>lua require('telescope.builtin').lsp_code_actions(require('telescope.themes').get_cursor())<CR>") -- code actions
 
 -- nvim-tree
@@ -54,3 +54,13 @@ mapper('n', '<C-j>', ':%s/\vmapper')
 
 -- Terminal
 mapper('n', '<C-t>', ':split <CR> :ter <CR> :resize 15 <CR>')
+
+-- Coc
+mapper('n', 'gd', '<Plug>(coc-definition)')
+mapper('n', 'gy', '<Plug>(coc-type-definition)')
+mapper('n', 'gi', '<Plug>(coc-implementation)')
+mapper('n', 'gr', '<Plug>(coc-references)')
+
+mapper('n', '<Leader>a', '<Plug>(coc-codeaction-selected)')
+mapper('n', '<leader>qf', '<Plug>(coc-fix-current)')
+mapper('n', 'ff', '<Plug>(coc-format-selected)')

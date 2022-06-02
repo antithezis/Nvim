@@ -6,6 +6,7 @@ local theme = require "themes.theme"
 
 vim.g.mapleader = " "
 
+vim.g.vim_jsx_pretty_colorful_config = 1
 vim.cmd [[set fcs=eob:\ ]]
 vim.cmd [[filetype plugin indent on]]
 
