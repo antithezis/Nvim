@@ -5,8 +5,8 @@
     "typescript",
     "typescriptreact"
   ],
-
   "tsserver.formatOnType": true,
+  
   "coc.preferences.formatOnType": true,
   "suggest.autoTrigger": "none",
   "suggest.timeout": 1,

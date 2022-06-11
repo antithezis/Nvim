@@ -14,8 +14,8 @@ mapper('n', '<C-Right>', ':bn <CR>')
 
 mapper('n', '<C-w>', ':w <CR>')
 mapper('n', '<C-q>', ':q <CR>')
-mapper('n', '<Leader><Right>', '20 <C-w>>')
-mapper('n', '<Leader><Left>', '20 <C-w><')
+mapper('n', '<C-L>', '20 <C-w>>')
+mapper('n', '<C-H>', '20 <C-w><')
 
 -- Text editor
 mapper('n', '<C-a>', 'gg<S-v>G')

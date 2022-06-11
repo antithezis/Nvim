@@ -154,6 +154,8 @@ return packer.startup(function(use)
   use 'fleischie/vim-styled-components'
   -- use 'leafgarkabd/typescript-vim'
 
+  use 'github/copilot.vim'
+
   use {
     'prettier/vim-prettier',
     run = 'yarn install',
